@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pernyataan if else</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form name="form1" id="form1" method="POST" action="">
+            <label>
+                <strong>Username</strong>
+            <input name="txtuser" type="text">
+            </label>
+            <p>
+                <label>Password:</label>
+                <input name="txtpassword" type="password">
+            </p>
+            <p>
+                <input type="button" name="login" value="LogIn" onclick="cek()">
+            </p>
+        </form>
+
+        ,<script>
+            function cek(){
+                var $user=document.form1.txtuser.value;
+                var password=document.form1.txtpassword.value;
+
+                if(user!=""){
+                    if(password=="admin"){
+                            document.write("<p align=center><b>Selamat Datang, <i>"+user+"</p>");
+                    }else{
+                        alert("Password Salah !!!");
+                        document.form1.txtpassword.select();
+        
+                    }
+                }else{
+                    alert("Ketikkan User Name !!!");
+                    document.form1.txtuser.focus();
+                }
+            }
+        </script>
+    </body>
+</html>

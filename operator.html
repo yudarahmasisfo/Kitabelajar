@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Belajar Operator Pada Pemrograman JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <form id="form1" name="form1" method="POST" action="">
+            <h1 align="center">Kalkulator Perhitungan</h1>
+            <br>
+            <br>
+            <hr>
+
+            <label>
+                <strong>Masukkan Nilai Angka</strong><br><br>
+                Input Nilai A =
+                <input name="text1" type="text" id="inputA">
+            </label>
+            <br>
+            <label>
+                Input Nilai B = 
+                <input name="text2" type="text" id="inputB">
+            </label>
+            <p>
+                <label>
+                    <input type="button" value="hitung" name="tombol1" onclick="proses()">
+                </label>
+            </p>
+        </form>
+        <script>
+            function proses(){
+                    var nilaiA = document.form1.inputA.value;
+                    var nilaiB = document.form1.inputB.value;
+
+                    var jumlah = Number(nilaiA) + Number(nilaiB);
+                    var perkurangan = Number(nilaiA) - Number(nilaiB);
+                    var kali= Number(nilaiA) * Number(nilaiB);
+                    var bagi= Number(nilaiA) / Number(nilaiB);
+                    document.write("<b>Nilai A:</b>"+nilaiA+"<br>");
+                    document.write("<b>Nilai B:</b>"+NilaiB+"</br>");
+
+                    document.write("<br><br>");
+                    document.write("<br>"+nilaiA+"<font color=red></font>"+nilaiB+ "= <b>"+jumlah+"<br>)");
+
+            }
+        </script>
+    </body>
+</html>

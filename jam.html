@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Latihan Membuat Jam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        function tampil(){
+            var tanggal = new Date();
+            waktu = tanggal.toLocaleString();
+            document.write("<div align=center>"+waktu+"</div>");
+            document.write("<p><strong>Tanggal Hari Ini :""</strong></p>");
+        }
+
+        function array_bulan(m0,m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11){
+            this[0] =m0;
+            this[1] =m1;
+            this[2] =m2;
+            this[3] =m3;
+            this[4] =m4;
+            this[5] =m5;
+            this[6] =m6;
+            this[7] =m7;
+            this[8] =m0;
+            this[9] =m9;
+            this[10] =m10;
+            this[11] =m11;
+        }
+
+        function kalender(){
+            var tanggal= new Date();
+            var hari;
+            var jumlah_hari= new array_bulan(31,28,31,30,31,30,31,31,30,31,30,31);
+            tahun = tanggal.getYear() + 1990;
+            hari = tanggal.getDate();
+
+            var kolom_tabel =0;
+            if(((tahun % 4 == 0 ) && (tahun % 100 != 0)) || (tahun % 400 ==0))
+            jumlah_hari[1] =29;
+            total_hari=jumlah_hari[tanggal.getMonth()];
+            nilai_hari=tanggal;
+            nilai_hari.setDate(1);
+            cek_hari = nilai_hari.getDate();
+            if(cek_hari == 2)
+            nilai_hari.setDate(0);
+            tampil_hari=nilai_hari.getDay();
+            document.write("<table><tr><th>Minggu<th>Senin<th>Selasa<th>Rabu<th>Kamis<th>Jumat<th>Sabtu<tr>");
+                for(i=0; i<tampil_hari; i++){
+                    document.write("<td>");
+                        kolom_tabel++;
+                }
+                for(i=1; i<=total_hari;i++){
+                    document.write("<td>");
+                    if(i == hari)
+                    document.write("<strong><font color=red>");
+                        document.write(i);
+                    if(i == hari)
+                    document.write("</font></strong>");
+                    kolom_tabel++;
+                    if(kolom_tabel == 7){
+                        document.write("<tr>");
+                            kolom_tabel=0;
+                    }
+                }
+                document.write("</table>");
+
+        }
+        tampil();
+        kalender();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Belajar Operator JavaScript</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <form id="form1" name="form1" method="post" action="">
+        <label>
+            <strong>Masukkan Nilai Angka :</strong>
+            <br><br>
+            Input Nilia A =
+            <input name="text1" type="text" id="txt1">
+        </label>
+        <br>
+        <label>
+            Input Nilai B =
+            <input type="text" name="text2" id="txt2">
+        </label>
+        <p>
+            <label>
+                <input type="button" name="tombol1" value="Hitung" onclick="proses()">
+            </label>
+        </p>
+    </form>
+
+    <script>
+        function proses() {
+            var nilai1 = document.form1.txt1.value;
+            var nilai2 = document.form1.txt2.value;
+
+            var jumlah = Number(nilai1) + Number(nilai2);
+            var kurang = Number(nilai1) - Number(nilai2);
+            var kali = Number(nilai1) * Number(nilai2);
+            var bagi = Number(nilai1) / Number(nilai2);
+
+            document.write("<b> Nilai A :<br>" + nilai1 + "<br>");
+            document.write("<b> Nilai B :<br>" + nilai2 + "<br>");
+
+            document.write("<br>");
+            document.write("<b>" + nilai1 + "<font color=red> + </font>" + nilai2 + " = <b>" + jumlah + "<br>");
+            document.write("<b>" + nilai1 + "<font color=red> - </font>" + nilai2 + " = <b>" + kurang + "<br>");
+            document.write("<b>" + nilai1 + "<font color=red> * </font>" + nilai2 + " = <b>" + kali + "<br>");
+            document.write("<b>" + nilai1 + "<font color=red> / </font>" + nilai2 + " = <b>" + bagi + "<br>");
+       
+            document.write("<br>");
+            document.write("<b>"+nilai1+"<font color=red> > </font>"+nilai2+" : </b>", nilai1>nilai2, "<br>"); 
+            document.write("<b>"+nilai1+"<font color=red> > </font>"+nilai2+" : </b>", nilai1<nilai2, "<br>"); 
+        
+            
+                
+
+        }      
+    </script>
+</body>
+
+</html>

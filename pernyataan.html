@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contoh JS untuk pernyataan if dengan operator pembanging</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <form id="form1" name="form1" method="post" action="">
+            <label>
+                <strong>Silahkan Logi</strong>
+                <br><br>
+                Username :
+                <input name="username" type="text" id="txt1">
+            </label>
+            <br>
+            <label>
+                Password :
+                <input type="password" name="passwprd" id="txt2">
+            </label>
+            <p>
+                <label>
+                    <input type="button" name="login" value="LogIn" onclick="cek()">
+                    <input type="reset" name="bersih" value= Reset>
+                </label>
+            </p>
+        </form>
+
+        <script>
+                function cek(){
+                    var user=document.form1.txt1.value;
+                    var password=document.form1.txt2.value;
+                    if(user!==""){
+                            if(password=="admin"){
+                                document.write("<p align=center><b> Anda Berhasil Ke Dashboard, <i>"+user+"</i></b></p>");
+                            }else{
+                                alert("Password Salah !!!");
+                                document.form1.txt2.selecet();
+                            }
+                    }else{
+                        alert("Ketikan Usern Name Kalian");
+                        document.form1.txt2.focus();
+                    }
+
+                }     
+        </script>
+    </body>
+</html>
